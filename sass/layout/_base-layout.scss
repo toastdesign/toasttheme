@@ -13,17 +13,15 @@ body {
 	lost-center:$max-page-width;
 	
 	#masthead {
-		height:50px;
-		line-height: 50px;
 
-		.site-branding {
+		#site-branding {
 			lost-column:2/12;
 		}
 
 		#site-navigation {
 			lost-column:10/12;
 
-			.menu {
+			#primary-menu {
 				float:right;
 
 				li {
@@ -34,10 +32,61 @@ body {
 	}
 
 	#content {
-
+		lost-utility:clearfix;
+		
+		#primary {
+			lost-column:3/4;
+		}
+		#secondary {
+			lost-column:1/4;
+		}
 	}
 
 	#colophon {
-
+		
 	}
 }
+
+
+
+
+
+
+
+
+/* ==========================================================================
+temp styles
+========================================================================== */
+// #page {
+// 	border:1px solid red;
+	
+// 	#masthead {
+// 		border:1px solid red;
+
+// 		#site-branding {
+// 			border:1px solid red;
+// 		}
+
+// 		#site-navigation {
+// 			border:1px solid red;
+
+// 			#primary-menu {
+// 				border:1px solid red;
+// 			}
+// 		}
+// 	}
+
+// 	#content {
+// 		border:1px solid red;
+// 		#primary {
+// 			border:1px solid red;
+// 		}
+// 		#secondary {
+// 			border:1px solid red;
+// 		}
+// 	}
+
+// 	#colophon {
+// 		border:1px solid red;
+// 	}
+// }
