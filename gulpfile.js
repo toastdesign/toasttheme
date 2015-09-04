@@ -30,7 +30,7 @@ gulp.task('image', function(){
 // Compress scss styles
 gulp.task('styles', function(){
 	var processors = [
-		// csswring,
+		csswring,
 		autoprefixer({browsers: ['last 3 versions']}),
 		lost
 	];

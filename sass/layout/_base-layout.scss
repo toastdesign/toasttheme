@@ -1,0 +1,33 @@
+/* ==========================================================================
+Base layout
+========================================================================== */
+body {
+	padding:0 $mobile-padding;
+
+	@include breakpoint(420px){
+		padding:0 0;
+	}
+}
+
+#page {
+	lost-center:$max-page-width;
+	
+	#masthead {
+		
+		#site-branding {
+
+		}
+
+		#site-navigation {
+
+		}
+	}
+
+	#content {
+
+	}
+
+	#colophon {
+
+	}
+}
