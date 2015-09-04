@@ -3,7 +3,7 @@ Base layout
 ========================================================================== */
 body {
 	padding:0 $mobile-padding;
-
+	margin:0;
 	@include breakpoint(420px){
 		padding:0 0;
 	}
@@ -13,13 +13,23 @@ body {
 	lost-center:$max-page-width;
 	
 	#masthead {
-		
-		#site-branding {
+		height:50px;
+		line-height: 50px;
 
+		.site-branding {
+			lost-column:2/12;
 		}
 
 		#site-navigation {
+			lost-column:10/12;
 
+			.menu {
+				float:right;
+
+				li {
+					margin-left:20px;
+				}
+			}
 		}
 	}
 
