@@ -1,9 +1,12 @@
 var gulp = require('gulp'),
+	autoprefixer = require('autoprefixer')
 	uglify = require('gulp-uglify')
 	sass = require('gulp-sass')
 	plumber = require('gulp-plumber')
 	imagemin = require('gulp-imagemin')
-	prefix = require('gulp-autoprefixer');
+	postcss = require('gulp-postcss')
+	csswring = require('csswring')
+	lost = require('lost');
 
 
 // Scripts task
@@ -26,12 +29,16 @@ gulp.task('image', function(){
 // Styles
 // Compress scss styles
 gulp.task('styles', function(){
-	gulp.src('sass/style.scss')
+	var processors = [
+		// csswring,
+		autoprefixer({browsers: ['last 3 versions']}),
+		lost
+	];
+
+	return gulp.src('sass/style.scss')
 		.pipe(plumber())
-		.pipe(sass({
-			style:'expanded'
-		}))
-		.pipe(prefix('last 3 versions'))
+		.pipe(sass())
+		.pipe(postcss(processors))
 		.pipe(gulp.dest(''))
 });
 
